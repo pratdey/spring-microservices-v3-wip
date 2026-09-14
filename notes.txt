@@ -1,0 +1,169 @@
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+		
+---------------------------------------------------powershell---------------------------------		
+PS C:\Users\Pratul_Dey> mvn -version
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: C:\Softwares\apache-maven-3.9.16
+Java version: 17.0.15, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-17
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+PS C:\Users\Pratul_Dey> cd C:\D_Pratul\VSCode_workspace\sp_workspace\spring-test-1
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\spring-test-1> mvn dependency:resolve
+[INFO] Scanning for projects...
+
+
+
+The POM is fine. Your build is failing because Maven cannot write to its local JAR cache, not because spring-boot-starter-web is missing:
+AccessDeniedException:
+C:\Users\Pratul_Dey\.m2\repository\...\maven-clean-plugin-3.4.0.pom.lastUpdated
+Fix the .m2 folder permission:
+Close VS Code and all terminals running Maven.
+In File Explorer, open:
+C:\Users\Pratul_Dey\.m2
+Right-click → Properties → Security → ensure your user Pratul_Dey has Full control.
+Delete this failed-download cache folder:
+C:\Users\Pratul_Dey\.m2\repository\org\apache\maven\plugins\maven-clean-plugin\3.4.0
+Reopen VS Code, open a new terminal, and run:
+cd C:\D_Pratul\VSCode_workspace\sp_workspace\spring-test-1
+mvn clean verify
+As a quick workaround that avoids your user .m2 folder entirely:
+mvn -Dmaven.repo.local=C:\D_Pratul\VSCode_workspace\sp_workspace\.m2-repository clean verify
+That will download Maven plugins and Spring dependencies into the workspace-local .m2-repository folder.
+
+
+================================================================================================================
+
+Java: Clean Java Language Server Workspace
+
+=============================================================================================================
+
+In your application:
+
+1. Who launches the Spring Context?
+
+`SpringApplication.run()` in `SpringBootTest1Application.main()`:
+
+```java
+SpringApplication.run(SpringBootTest1Application.class, args);
+```
+
+2. Who triggers component scanning?
+
+`@SpringBootApplication` triggers component scanning.
+
+It scans the package:
+
+```text
+com.example.springboottest1
+```
+
+and its subpackages, finding controllers and components.
+
+3. Who enables auto-configuration?
+
+`@SpringBootApplication` also enables auto-configuration.
+
+It is a combination of:
+
+```java
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
+```
+
+So, `@SpringBootApplication` handles both component scanning and auto-configuration.
+
+=================================POWERSHELL commands====================================
+
+ mvn -f pom.xml clean test
+ 
+ netstat -ano | findstr :8080
+ Get-Process -Id 31256
+ 
+ 
+ 
+ 
+ For a visual graph, Maven can generate GraphML and will be saved target/dependency-graph.graphml
+ 
+mvn com.github.ferstl:depgraph-maven-plugin:graph
+
+open Graphviz Online and paste the .dot file 
+
+
+=========================================================================================
+spring Security
+does series of filetr chk [called filter chain]
+
+1. all req should be authenticated 
+2. if a req is not authenticated, one webpage will be opened (ex: /login page)
+3. CSRF ->  impact on POST , PUT 
+
+change : 
+1. HTTPBasicAuthtication -> popup should ask (username/passowrd)
+2. disable CSRF , so that we can send post req
+
+if we want to override existing filter chain , we have to define the whole chain 
+
+implementation ->
+configuration 
+Bean
+
+============================================
+
+PS C:\Users\Pratul_Dey> cd C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices> mkdir git-localconfig-repo
+
+
+    Directory: C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        14-09-2026     21:44                git-localconfig-repo
+
+
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices> cd git-localconfig-repo
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> pwd
+
+Path
+----
+C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo
+
+
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> git init
+Initialized empty Git repository in C:/D_Pratul/VSCode_workspace/sp_workspace/03.microservices/git-localconfig-repo/.git/
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> ls
+
+
+    Directory: C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        14-09-2026     21:48             52 limits-service.properties
+
+
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> git add *
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> git commit - m "add lmsrv"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'm' did not match any file(s) known to git
+error: pathspec 'add lmsrv' did not match any file(s) known to git
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> git commit - m " adding limits-service.properties"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'm' did not match any file(s) known to git
+error: pathspec ' adding limits-service.properties' did not match any file(s) known to git
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> git commit -m "add lmsrv"
+[master (root-commit) d7fa678] add lmsrv
+ 1 file changed, 2 insertions(+)
+ create mode 100644 limits-service.properties
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo> pwd
+
+Path
+----
+C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo
+
+
+PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo>

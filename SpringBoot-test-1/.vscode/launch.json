@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run SpringBoot-test-1",
+            "request": "launch",
+            "mainClass": "com.example.springboottest1.SpringBootTest1Application",
+            "projectName": "SpringBoot-test-1"
+        }
+    ]
+}
