@@ -20,7 +20,7 @@ public class CircuitBreakerController {
 	//@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
 	//@CircuitBreaker(name = "default", fallbackMethod = "hardcodedResponse")
 	//@RateLimiter(name="default")
-	@Bulkhead(name="sample-api")
+	@Bulkhead(name="sample-api")   // concurrent call
 	//10s => 10000 calls to the sample api
 	public String sampleApi() {
 		logger.info("Sample api call received");

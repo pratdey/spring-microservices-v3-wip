@@ -178,3 +178,11 @@ git push -u origin main
 
 
 git branch -M main 
+
+
+===============================================
+launch multiple instance of a service in VS code 
+cd to the project root path 
+run it in powershell
+mvn spring-boot:run "-Dspring-boot.run.arguments=--server.port=9085"
+

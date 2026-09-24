@@ -1,4 +1,10 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "workbench.editor.enablePreview":false
+    "workbench.editor.enablePreview":false,
+	"type": "java",
+  "name": "Run REST service - 9085",
+  "request": "launch",
+  "mainClass": "com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication",
+  "projectName": "restful-web-services",
+  "args": "--server.port=9085"
 }

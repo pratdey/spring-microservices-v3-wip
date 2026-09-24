@@ -23,14 +23,17 @@ public class CurrencyConversionController {
 			@PathVariable BigDecimal quantity
 			) {
 		
+				/* step2 */
 		HashMap<String, String> uriVariables = new HashMap<>();
 		uriVariables.put("from",from);
 		uriVariables.put("to",to);
 		
+		/* step1 */
 		ResponseEntity<CurrencyConversion> responseEntity = new RestTemplate().getForEntity
 		("http://localhost:8000/currency-exchange/from/{from}/to/{to}", 
 				CurrencyConversion.class, uriVariables);
 		
+		/* step3 */
 		CurrencyConversion currencyConversion = responseEntity.getBody();
 		
 		return new CurrencyConversion(currencyConversion.getId(), 

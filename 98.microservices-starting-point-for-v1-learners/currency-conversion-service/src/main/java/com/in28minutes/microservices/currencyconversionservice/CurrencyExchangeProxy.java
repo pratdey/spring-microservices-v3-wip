@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 //@FeignClient(name="currency-exchange", url="localhost:8000")
-@FeignClient(name="currency-exchange")
+@FeignClient(name="currency-exchange")   // for load balancing
 public interface CurrencyExchangeProxy {
 	
+	/* declaration of the restcontroller which we want to connect from this service  */
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversion retrieveExchangeValue(
 			@PathVariable("from") String from,
