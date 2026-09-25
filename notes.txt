@@ -169,11 +169,12 @@ C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo
 PS C:\D_Pratul\VSCode_workspace\sp_workspace\03.microservices\git-localconfig-repo>
 
 
-=============================
-git remote add origin https://github.com/pratdey/spring-microservices-v3-wip.git
+=============================github checkin============================
+> go to root workspace folder 
 git init 
+git remote add origin https://github.com/pratdey/spring-microservices-v3-wip.git
 git add .
-git commit -m "Add entire project directory to new branch"
+git commit -m "Add entire project from new system"
 git push -u origin main  
 
 
