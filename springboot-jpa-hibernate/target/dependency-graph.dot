@@ -1,0 +1,187 @@
+digraph "springboot-jpa-hibernate" {
+  node [shape="box",style="rounded",fontname="Helvetica",fontsize="14"]
+  edge [fontsize="10",fontname="Helvetica"]
+
+  // Node Definitions:
+  "ch.qos.logback:logback-classic:jar"[label=<logback-classic>]
+  "ch.qos.logback:logback-core:jar"[label=<logback-core>]
+  "org.springframework.boot:spring-boot-starter-logging:jar"[label=<spring-boot-starter-logging>]
+  "org.apache.logging.log4j:log4j-to-slf4j:jar"[label=<log4j-to-slf4j>]
+  "org.apache.logging.log4j:log4j-api:jar"[label=<log4j-api>]
+  "org.slf4j:jul-to-slf4j:jar"[label=<jul-to-slf4j>]
+  "org.springframework.boot:spring-boot-starter:jar"[label=<spring-boot-starter>]
+  "jakarta.annotation:jakarta.annotation-api:jar"[label=<jakarta.annotation-api>]
+  "org.yaml:snakeyaml:jar"[label=<snakeyaml>]
+  "org.springframework.boot:spring-boot-starter-web:jar"[label=<spring-boot-starter-web>]
+  "com.fasterxml.jackson.core:jackson-databind:jar"[label=<jackson-databind>]
+  "com.fasterxml.jackson.core:jackson-annotations:jar"[label=<jackson-annotations>]
+  "com.fasterxml.jackson.core:jackson-core:jar"[label=<jackson-core>]
+  "org.springframework.boot:spring-boot-starter-json:jar"[label=<spring-boot-starter-json>]
+  "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar"[label=<jackson-datatype-jdk8>]
+  "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar"[label=<jackson-datatype-jsr310>]
+  "com.fasterxml.jackson.module:jackson-module-parameter-names:jar"[label=<jackson-module-parameter-names>]
+  "org.springframework.boot:spring-boot-starter-tomcat:jar"[label=<spring-boot-starter-tomcat>]
+  "org.apache.tomcat.embed:tomcat-embed-core:jar"[label=<tomcat-embed-core>]
+  "org.apache.tomcat.embed:tomcat-embed-el:jar"[label=<tomcat-embed-el>]
+  "org.apache.tomcat.embed:tomcat-embed-websocket:jar"[label=<tomcat-embed-websocket>]
+  "org.springframework:spring-web:jar"[label=<spring-web>]
+  "org.springframework:spring-beans:jar"[label=<spring-beans>]
+  "io.micrometer:micrometer-observation:jar"[label=<micrometer-observation>]
+  "io.micrometer:micrometer-commons:jar"[label=<micrometer-commons>]
+  "org.springframework:spring-webmvc:jar"[label=<spring-webmvc>]
+  "org.springframework:spring-aop:jar"[label=<spring-aop>]
+  "org.springframework:spring-context:jar"[label=<spring-context>]
+  "org.springframework:spring-expression:jar"[label=<spring-expression>]
+  "com.example:springboot-jpa-hibernate:jar"[label=<springboot-jpa-hibernate>]
+  "com.zaxxer:HikariCP:jar"[label=<HikariCP>]
+  "org.slf4j:slf4j-api:jar"[label=<slf4j-api>]
+  "org.springframework.boot:spring-boot-starter-jdbc:jar"[label=<spring-boot-starter-jdbc>]
+  "org.springframework:spring-jdbc:jar"[label=<spring-jdbc>]
+  "org.springframework:spring-tx:jar"[label=<spring-tx>]
+  "org.hibernate.orm:hibernate-core:jar"[label=<hibernate-core>]
+  "jakarta.persistence:jakarta.persistence-api:jar"[label=<jakarta.persistence-api>]
+  "jakarta.transaction:jakarta.transaction-api:jar"[label=<jakarta.transaction-api>]
+  "org.jboss.logging:jboss-logging:jar"[label=<jboss-logging<font point-size="10"><br/>(runtime)</font>>]
+  "org.hibernate.common:hibernate-commons-annotations:jar"[label=<hibernate-commons-annotations<font point-size="10"><br/>(runtime)</font>>]
+  "io.smallrye:jandex:jar"[label=<jandex<font point-size="10"><br/>(runtime)</font>>]
+  "com.fasterxml:classmate:jar"[label=<classmate<font point-size="10"><br/>(runtime)</font>>]
+  "net.bytebuddy:byte-buddy:jar"[label=<byte-buddy<font point-size="10"><br/>(runtime)</font>>]
+  "org.glassfish.jaxb:jaxb-core:jar"[label=<jaxb-core<font point-size="10"><br/>(runtime)</font>>]
+  "org.eclipse.angus:angus-activation:jar"[label=<angus-activation<font point-size="10"><br/>(runtime)</font>>]
+  "org.glassfish.jaxb:txw2:jar"[label=<txw2<font point-size="10"><br/>(runtime)</font>>]
+  "com.sun.istack:istack-commons-runtime:jar"[label=<istack-commons-runtime<font point-size="10"><br/>(runtime)</font>>]
+  "org.glassfish.jaxb:jaxb-runtime:jar"[label=<jaxb-runtime<font point-size="10"><br/>(runtime)</font>>]
+  "jakarta.inject:jakarta.inject-api:jar"[label=<jakarta.inject-api<font point-size="10"><br/>(runtime)</font>>]
+  "org.antlr:antlr4-runtime:jar"[label=<antlr4-runtime>]
+  "org.springframework.boot:spring-boot-starter-data-jpa:jar"[label=<spring-boot-starter-data-jpa>]
+  "org.springframework.data:spring-data-jpa:jar"[label=<spring-data-jpa>]
+  "org.springframework.data:spring-data-commons:jar"[label=<spring-data-commons>]
+  "org.springframework:spring-orm:jar"[label=<spring-orm>]
+  "org.springframework:spring-aspects:jar"[label=<spring-aspects>]
+  "org.aspectj:aspectjweaver:jar"[label=<aspectjweaver>]
+  "org.springframework.boot:spring-boot-devtools:jar"[label=<<font point-size="10">&lt;optional&gt;</font><br/>spring-boot-devtools<font point-size="10"><br/>(runtime)</font>>]
+  "org.springframework.boot:spring-boot:jar"[label=<spring-boot>]
+  "org.springframework.boot:spring-boot-autoconfigure:jar"[label=<spring-boot-autoconfigure>]
+  "com.h2database:h2:jar"[label=<h2<font point-size="10"><br/>(runtime)</font>>]
+  "org.springframework.boot:spring-boot-starter-test:jar"[label=<spring-boot-starter-test<font point-size="10"><br/>(test)</font>>]
+  "org.springframework.boot:spring-boot-test:jar"[label=<spring-boot-test<font point-size="10"><br/>(test)</font>>]
+  "org.springframework.boot:spring-boot-test-autoconfigure:jar"[label=<spring-boot-test-autoconfigure<font point-size="10"><br/>(test)</font>>]
+  "com.jayway.jsonpath:json-path:jar"[label=<json-path<font point-size="10"><br/>(test)</font>>]
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar"[label=<jakarta.xml.bind-api<font point-size="10"><br/>(runtime)</font>>]
+  "jakarta.activation:jakarta.activation-api:jar"[label=<jakarta.activation-api<font point-size="10"><br/>(runtime)</font>>]
+  "net.minidev:accessors-smart:jar"[label=<accessors-smart<font point-size="10"><br/>(test)</font>>]
+  "org.ow2.asm:asm:jar"[label=<asm<font point-size="10"><br/>(test)</font>>]
+  "net.minidev:json-smart:jar"[label=<json-smart<font point-size="10"><br/>(test)</font>>]
+  "org.assertj:assertj-core:jar"[label=<assertj-core<font point-size="10"><br/>(test)</font>>]
+  "org.awaitility:awaitility:jar"[label=<awaitility<font point-size="10"><br/>(test)</font>>]
+  "org.hamcrest:hamcrest:jar"[label=<hamcrest<font point-size="10"><br/>(test)</font>>]
+  "org.junit.jupiter:junit-jupiter-api:jar"[label=<junit-jupiter-api<font point-size="10"><br/>(test)</font>>]
+  "org.opentest4j:opentest4j:jar"[label=<opentest4j<font point-size="10"><br/>(test)</font>>]
+  "org.junit.platform:junit-platform-commons:jar"[label=<junit-platform-commons<font point-size="10"><br/>(test)</font>>]
+  "org.apiguardian:apiguardian-api:jar"[label=<apiguardian-api<font point-size="10"><br/>(test)</font>>]
+  "org.junit.jupiter:junit-jupiter:jar"[label=<junit-jupiter<font point-size="10"><br/>(test)</font>>]
+  "org.junit.jupiter:junit-jupiter-params:jar"[label=<junit-jupiter-params<font point-size="10"><br/>(test)</font>>]
+  "org.junit.jupiter:junit-jupiter-engine:jar"[label=<junit-jupiter-engine<font point-size="10"><br/>(test)</font>>]
+  "org.junit.platform:junit-platform-engine:jar"[label=<junit-platform-engine<font point-size="10"><br/>(test)</font>>]
+  "org.mockito:mockito-core:jar"[label=<mockito-core<font point-size="10"><br/>(test)</font>>]
+  "net.bytebuddy:byte-buddy-agent:jar"[label=<byte-buddy-agent<font point-size="10"><br/>(test)</font>>]
+  "org.objenesis:objenesis:jar"[label=<objenesis<font point-size="10"><br/>(test)</font>>]
+  "org.mockito:mockito-junit-jupiter:jar"[label=<mockito-junit-jupiter<font point-size="10"><br/>(test)</font>>]
+  "org.skyscreamer:jsonassert:jar"[label=<jsonassert<font point-size="10"><br/>(test)</font>>]
+  "com.vaadin.external.google:android-json:jar"[label=<android-json<font point-size="10"><br/>(test)</font>>]
+  "org.springframework:spring-core:jar"[label=<spring-core>]
+  "org.springframework:spring-jcl:jar"[label=<spring-jcl>]
+  "org.springframework:spring-test:jar"[label=<spring-test<font point-size="10"><br/>(test)</font>>]
+  "org.xmlunit:xmlunit-core:jar"[label=<xmlunit-core<font point-size="10"><br/>(test)</font>>]
+
+  // Edge Definitions:
+  "ch.qos.logback:logback-classic:jar" -> "ch.qos.logback:logback-core:jar"
+  "org.springframework.boot:spring-boot-starter-logging:jar" -> "ch.qos.logback:logback-classic:jar"
+  "org.apache.logging.log4j:log4j-to-slf4j:jar" -> "org.apache.logging.log4j:log4j-api:jar"
+  "org.springframework.boot:spring-boot-starter-logging:jar" -> "org.apache.logging.log4j:log4j-to-slf4j:jar"
+  "org.springframework.boot:spring-boot-starter-logging:jar" -> "org.slf4j:jul-to-slf4j:jar"
+  "org.springframework.boot:spring-boot-starter:jar" -> "org.springframework.boot:spring-boot-starter-logging:jar"
+  "org.springframework.boot:spring-boot-starter:jar" -> "jakarta.annotation:jakarta.annotation-api:jar"
+  "org.springframework.boot:spring-boot-starter:jar" -> "org.yaml:snakeyaml:jar"
+  "org.springframework.boot:spring-boot-starter-web:jar" -> "org.springframework.boot:spring-boot-starter:jar"
+  "com.fasterxml.jackson.core:jackson-databind:jar" -> "com.fasterxml.jackson.core:jackson-annotations:jar"
+  "com.fasterxml.jackson.core:jackson-databind:jar" -> "com.fasterxml.jackson.core:jackson-core:jar"
+  "org.springframework.boot:spring-boot-starter-json:jar" -> "com.fasterxml.jackson.core:jackson-databind:jar"
+  "org.springframework.boot:spring-boot-starter-json:jar" -> "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar"
+  "org.springframework.boot:spring-boot-starter-json:jar" -> "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar"
+  "org.springframework.boot:spring-boot-starter-json:jar" -> "com.fasterxml.jackson.module:jackson-module-parameter-names:jar"
+  "org.springframework.boot:spring-boot-starter-web:jar" -> "org.springframework.boot:spring-boot-starter-json:jar"
+  "org.springframework.boot:spring-boot-starter-tomcat:jar" -> "org.apache.tomcat.embed:tomcat-embed-core:jar"
+  "org.springframework.boot:spring-boot-starter-tomcat:jar" -> "org.apache.tomcat.embed:tomcat-embed-el:jar"
+  "org.springframework.boot:spring-boot-starter-tomcat:jar" -> "org.apache.tomcat.embed:tomcat-embed-websocket:jar"
+  "org.springframework.boot:spring-boot-starter-web:jar" -> "org.springframework.boot:spring-boot-starter-tomcat:jar"
+  "org.springframework:spring-web:jar" -> "org.springframework:spring-beans:jar"
+  "io.micrometer:micrometer-observation:jar" -> "io.micrometer:micrometer-commons:jar"
+  "org.springframework:spring-web:jar" -> "io.micrometer:micrometer-observation:jar"
+  "org.springframework.boot:spring-boot-starter-web:jar" -> "org.springframework:spring-web:jar"
+  "org.springframework:spring-webmvc:jar" -> "org.springframework:spring-aop:jar"
+  "org.springframework:spring-webmvc:jar" -> "org.springframework:spring-context:jar"
+  "org.springframework:spring-webmvc:jar" -> "org.springframework:spring-expression:jar"
+  "org.springframework.boot:spring-boot-starter-web:jar" -> "org.springframework:spring-webmvc:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "org.springframework.boot:spring-boot-starter-web:jar"
+  "com.zaxxer:HikariCP:jar" -> "org.slf4j:slf4j-api:jar"
+  "org.springframework.boot:spring-boot-starter-jdbc:jar" -> "com.zaxxer:HikariCP:jar"
+  "org.springframework:spring-jdbc:jar" -> "org.springframework:spring-tx:jar"
+  "org.springframework.boot:spring-boot-starter-jdbc:jar" -> "org.springframework:spring-jdbc:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "org.springframework.boot:spring-boot-starter-jdbc:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "jakarta.persistence:jakarta.persistence-api:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "jakarta.transaction:jakarta.transaction-api:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "org.jboss.logging:jboss-logging:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "org.hibernate.common:hibernate-commons-annotations:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "io.smallrye:jandex:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "com.fasterxml:classmate:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "net.bytebuddy:byte-buddy:jar"
+  "org.glassfish.jaxb:jaxb-core:jar" -> "org.eclipse.angus:angus-activation:jar"
+  "org.glassfish.jaxb:jaxb-core:jar" -> "org.glassfish.jaxb:txw2:jar"
+  "org.glassfish.jaxb:jaxb-core:jar" -> "com.sun.istack:istack-commons-runtime:jar"
+  "org.glassfish.jaxb:jaxb-runtime:jar" -> "org.glassfish.jaxb:jaxb-core:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "org.glassfish.jaxb:jaxb-runtime:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "jakarta.inject:jakarta.inject-api:jar"
+  "org.hibernate.orm:hibernate-core:jar" -> "org.antlr:antlr4-runtime:jar"
+  "org.springframework.boot:spring-boot-starter-data-jpa:jar" -> "org.hibernate.orm:hibernate-core:jar"
+  "org.springframework.data:spring-data-jpa:jar" -> "org.springframework.data:spring-data-commons:jar"
+  "org.springframework.data:spring-data-jpa:jar" -> "org.springframework:spring-orm:jar"
+  "org.springframework.boot:spring-boot-starter-data-jpa:jar" -> "org.springframework.data:spring-data-jpa:jar"
+  "org.springframework:spring-aspects:jar" -> "org.aspectj:aspectjweaver:jar"
+  "org.springframework.boot:spring-boot-starter-data-jpa:jar" -> "org.springframework:spring-aspects:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "org.springframework.boot:spring-boot-starter-data-jpa:jar"
+  "org.springframework.boot:spring-boot-devtools:jar" -> "org.springframework.boot:spring-boot:jar"
+  "org.springframework.boot:spring-boot-devtools:jar" -> "org.springframework.boot:spring-boot-autoconfigure:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "org.springframework.boot:spring-boot-devtools:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "com.h2database:h2:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.springframework.boot:spring-boot-test:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.springframework.boot:spring-boot-test-autoconfigure:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "com.jayway.jsonpath:json-path:jar"
+  "jakarta.xml.bind:jakarta.xml.bind-api:jar" -> "jakarta.activation:jakarta.activation-api:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "jakarta.xml.bind:jakarta.xml.bind-api:jar"
+  "net.minidev:accessors-smart:jar" -> "org.ow2.asm:asm:jar"
+  "net.minidev:json-smart:jar" -> "net.minidev:accessors-smart:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "net.minidev:json-smart:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.assertj:assertj-core:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.awaitility:awaitility:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.hamcrest:hamcrest:jar"
+  "org.junit.jupiter:junit-jupiter-api:jar" -> "org.opentest4j:opentest4j:jar"
+  "org.junit.jupiter:junit-jupiter-api:jar" -> "org.junit.platform:junit-platform-commons:jar"
+  "org.junit.jupiter:junit-jupiter-api:jar" -> "org.apiguardian:apiguardian-api:jar"
+  "org.junit.jupiter:junit-jupiter:jar" -> "org.junit.jupiter:junit-jupiter-api:jar"
+  "org.junit.jupiter:junit-jupiter:jar" -> "org.junit.jupiter:junit-jupiter-params:jar"
+  "org.junit.jupiter:junit-jupiter-engine:jar" -> "org.junit.platform:junit-platform-engine:jar"
+  "org.junit.jupiter:junit-jupiter:jar" -> "org.junit.jupiter:junit-jupiter-engine:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.junit.jupiter:junit-jupiter:jar"
+  "org.mockito:mockito-core:jar" -> "net.bytebuddy:byte-buddy-agent:jar"
+  "org.mockito:mockito-core:jar" -> "org.objenesis:objenesis:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.mockito:mockito-core:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.mockito:mockito-junit-jupiter:jar"
+  "org.skyscreamer:jsonassert:jar" -> "com.vaadin.external.google:android-json:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.skyscreamer:jsonassert:jar"
+  "org.springframework:spring-core:jar" -> "org.springframework:spring-jcl:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.springframework:spring-core:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.springframework:spring-test:jar"
+  "org.springframework.boot:spring-boot-starter-test:jar" -> "org.xmlunit:xmlunit-core:jar"
+  "com.example:springboot-jpa-hibernate:jar" -> "org.springframework.boot:spring-boot-starter-test:jar"
+}

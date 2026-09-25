@@ -1,0 +1,9 @@
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\Entity\Course.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\Entity\CourseEntity.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\repository\CourseJdbcRepository.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\repository\CourseJPARepository.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\repository\CourseSpringDataRepository.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\runner\CourseJDCCLRunner.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\runner\CourseJPACLRunner.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\runner\CourseSDRCLRunner.java
+C:\D_Pratul\VSCode_workspace\sp_workspace\springboot-jpa-hibernate\src\main\java\com\example\springbootjpahibernate\SpringbootJpaHibernateApplication.java
